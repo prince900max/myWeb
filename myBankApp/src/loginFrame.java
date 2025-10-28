@@ -165,18 +165,18 @@ public class loginFrame extends javax.swing.JFrame {
       
         else
             try{
-                String sql = "SELECT * FROM tav_registration_table WHERE username = ? AND password = ?";
-                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tavrince_mobile_app_registrations","root","123456");
-                pst = con.prepareCall(sql);
+                String sql = "SELECT * FROM tavrince_table WHERE firstName = ? AND password = ?";
+                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tavrince_db","root","123456");
+                pst = con.prepareStatement(sql);
                 pst.setString(1, username);// username
                 pst.setString(2, password);// password
                 
                 rs = pst.executeQuery();
-                 int rowsInserted = pst.executeUpdate();
+                
                 
                   
-            if (rowsInserted > 0) {
-                JOptionPane.showMessageDialog(null, " Welcome" + firstName);
+            if (rs.next()) {
+                JOptionPane.showMessageDialog(null, " Welcome " + username );
                 
               tav_main l = new tav_main();
                 this.setVisible(false);

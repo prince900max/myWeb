@@ -291,9 +291,9 @@ public class myBankAppForm extends javax.swing.JFrame {
         
          try{
 
-            String query ="INSERT INTO `tav_registration_table`(`firstName`, `lastName`, `gender`, `phone`,`address`, `password`, `balance` ) VALUES (?, ?, ?, ?, ?, ?)";
+            String query ="INSERT INTO `tavrince_table`(`firstName`, `lastName`, `gender`, `phone`, `address`, `password` ) VALUES (?, ?, ?, ?, ?, ?)";
 
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tavrince_mobile_app_registrations","root", "123456");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tavrince_db","root", "123456");
             pst = con.prepareStatement(query);
             pst.setString(1, firstName.getText());
             pst.setString(2, lastName.getText());
@@ -301,6 +301,7 @@ public class myBankAppForm extends javax.swing.JFrame {
             pst.setString (4,phone.getText());
             pst.setString (5, address.getText());
             pst.setString(6, password.getText());
+            
             
              int rowsInserted = pst.executeUpdate();
            

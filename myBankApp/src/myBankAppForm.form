@@ -162,10 +162,8 @@
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                               <Component id="lastName" pref="311" max="32767" attributes="0"/>
                                               <Component id="firstName" max="32767" attributes="0"/>
-                                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                                  <Component id="gender" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="phone" alignment="0" pref="179" max="32767" attributes="0"/>
-                                              </Group>
+                                              <Component id="gender" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="phone" alignment="0" pref="179" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
